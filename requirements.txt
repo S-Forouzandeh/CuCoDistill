@@ -1,0 +1,13 @@
+# --- Core (required) ---
+torch>=2.0
+numpy>=1.23
+scipy>=1.10
+
+# --- Official baselines (optional) ---
+# DHG (DeepHypergraph) provides the authors' official HGNN / HGNNP / HyperGCN /
+# HNHN and the Uni-* models. DHG conservatively pins numpy<2 and torch<2, but the
+# model classes run on newer versions. Without DHG the package falls back to the
+# in-repo reference baselines automatically.
+dhg>=0.9.5
+optuna            # imported by dhg's package __init__
+scikit-learn      # imported by dhg utilities
